@@ -104,10 +104,7 @@ font-size: 26px;
     height: 60vh;
     width: 50%;
 }
-/* .delivery-guy > img{
-  height: 100%;
-  background-color: #00a651;
-} */
+
 #waybill-number {
     background: var(--white);
     color: grey;
@@ -287,14 +284,23 @@ padding: 30px;
   
 }
 
-.link-list > ul > li{
+.link-list > ul > li {
   list-style: none;
   margin-top: 20px;
   transition: all;
   transition-duration: 0.8s;
-}
 
-.link-list > ul > li:hover{
+}
+.link-list > ul > li >a {
+  text-decoration: none;
+  color: #f2fff7;
+  transition: all;
+  transition-duration: 0.8s;
+}
+.link-list > ul > li >a :hover{
+color: var(--green);
+}
+.link-list > ul > li :hover{
   color: var(--green);
   cursor: pointer;
 }
