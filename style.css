@@ -48,6 +48,8 @@ nav > a {
     color: #282828;
     font-weight: 700;
     margin-right: 30px;
+    transition: all;
+    transition-duration: 0.85s;
 }
 nav > a:hover {
     color: #00a651;
@@ -274,10 +276,25 @@ padding: 30px;
   background: var(--black);
 }
 .spruce-footer-info{
-  width: 30%;
+  width: 350px;
+  
 }
-.link-list{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.spruce-footer-info > p{
+  margin-top: 20px;
+}
+.link-list > h4{
+  font-size: 25px;
+  
+}
+
+.link-list > ul > li{
+  list-style: none;
+  margin-top: 20px;
+  transition: all;
+  transition-duration: 0.8s;
+}
+
+.link-list > ul > li:hover{
+  color: var(--green);
+  cursor: pointer;
 }
