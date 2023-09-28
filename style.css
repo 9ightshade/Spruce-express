@@ -1,0 +1,271 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --green: #00a651;
+    --black: #282828;
+    --very-light-green: #f2fff7;
+    --white: #fff;
+    --light-cyan: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.blog-logo {
+    display: flex;
+    align-items: center;
+}
+h2{
+  text-align: center;
+  background: var(--green);
+  color: var(--white);
+  width:400px ;
+  font-size: 25px;
+  margin: 0 auto;
+  padding: 10px 10px;
+
+
+}
+hr{
+  background: var(--green);
+  height: 3px;
+}
+.nav-header {
+    display: flex;
+    height: 20vh;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+naV {
+    display: flex;
+    align-items: center;
+}
+nav > a {
+    text-decoration: none;
+    color: #282828;
+    font-weight: 700;
+    margin-right: 30px;
+}
+nav > a:hover {
+    color: #00a651;
+}
+.cta-btn {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    cursor: pointer;
+    background: var(--green);
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.create-acct-btn {
+    border: solid var(--green) 1px;
+    padding: 10px 40px;
+    color: #282828;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #f2fff7;
+}
+.home-section {
+    background: url(./public/images/welcome-pagee-bg.jpg) var(--green);
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    background-blend-mode: multiply;
+}
+.track-info {
+    width: 50%;
+    color: var(--white);
+    padding: 40px;
+}
+.track-info > h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 700;
+}
+.track-info > p{
+margin-bottom: 20px;
+font-size: 26px;
+}
+.delivery-guy {
+    height: 60vh;
+    width: 50%;
+}
+/* .delivery-guy > img{
+  height: 100%;
+  background-color: #00a651;
+} */
+#waybill-number {
+    background: var(--white);
+    color: grey;
+    padding: 20px 20px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border: none;
+    width: 70%;
+    cursor: pointer;
+}
+#waybill-number::placeholder {
+    color: var(--green);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.track-btn {
+    background: var(--black);
+    color: var(--white);
+    padding: 20px 20px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: none;
+    margin-left: -5px;
+    width: 25%;
+    cursor: pointer;
+}
+.wavy-line {
+    background: var(--green);
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: var(--white);
+}
+
+.about-us > div{
+  display: flex;
+  padding: 40px 40px;
+  background: var(--very-light-green);
+}
+.article-about-us{
+  margin-top: 20px;
+  margin-left: 80px;
+  width: 500px;
+  font-size: 20px;
+}
+.article-about-us >p{
+  margin-top: 20px;
+}
+.more-about{
+  display: flex;
+  text-align: center;
+  padding: 40px;
+  height: 70vh;
+  justify-content: space-between;
+}
+.more-about > div{
+  background: var(--very-light-green);
+  border: 2px solid var(--green);
+  border-radius: 10px;
+width: 400px;
+padding: 30px;
+
+}
+.more-about > div > h3{
+  color: var(--green);
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.why-choose-us > div{
+  background: var(--very-light-green);
+  display: flex;
+  padding: 60px 20px;
+}
+.why-choose-us-article{
+display: flex;
+height: 36%;
+margin-top: 20px;
+margin-left: 40px;
+}
+
+.why-choose-us-article > img{
+  width: 100%;
+}
+
+.why-choose-us-article > article{
+  margin-left: 50px;
+}
+.why-choose-us-article > article > h3{
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.our-services-list{
+  display: flex;
+  justify-content: space-between;
+}
+.services{
+  background: var(--very-light-green);
+  border: 2px solid var(--green);
+  border-radius: 10px;
+width: 400px;
+height: 500px;
+margin: 25px 20px;
+padding: 30px;
+ text-align: center;
+}
+.services > h3{
+ margin-top: 30px;
+ margin-bottom: 30px;
+  color: var(--green);
+}
+.services > p{
+  width: 237px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+.profile-card{
+  display: flex;
+  padding: 40px 60px;
+
+}
+.profile-card1-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+
+}
+.profile-card1{
+  padding: 20px;
+}
+.profile-card1>p{
+  margin:30px 10px;
+}
+.profile-pic{
+  display: flex;
+  align-items: center;
+}
+.profile-info{
+  margin-left: 20px;
+  margin-right: 40px;
+}
+.profile-card2{
+  padding: 20px;
+  background-color: var(--very-light-green);
+}
+.profile-card2>p{
+  margin:30px 10px;
+}
+.footer{
+  display: flex;
+  background:var(--black);
+}
+.spruce-logo-footer{
+  background: var(--black);
+}
