@@ -16,7 +16,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['password']) ) {
 </head>
 <body>
 <section class="beit" style="background-color: green;">
-    <div><form action="">
+    <div><form action="./welcome.php" method="post"">
         <section style="background-color: white;" class="tori">
             <!-- <h1><input type="text" name="" id="" style="border: white;"> </h1> -->
          </section></form>
@@ -78,7 +78,7 @@ if (isset($_SESSION['email']) && isset($_SESSION['password']) ) {
 
 <?php
 }else {
-    header("Location: signup.html");
+    header("Location: ./signup.html");
     exit();
 }
 
