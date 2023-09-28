@@ -13,4 +13,25 @@ if($done){
 }
 
 
+
+
+
+
+
+$email = $_POST['u_mail'];
+$passkey = $_POST['passkey'];
+
+if ("$email===you2@gmail.com || $password===12345") {
+    echo "my email is the same";
+} else {
+    echo "password or email incorrect";
+if($done){
+    header("Location: ./signin.welcome.html");
+}
+    
+
+
+    
+}
+
 ?>
