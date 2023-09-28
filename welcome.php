@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (isset($_SESSION['email']) && isset($_SESSION['password']) ) {
+    $con = mysqli_connect('localhost', 'root', "", 'logistic');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +18,7 @@
 <section class="beit" style="background-color: green;">
     <div><form action="">
         <section style="background-color: white;" class="tori">
-            <h1><input type="text" name="" id="" style="border: white;"> </h1>
+            <!-- <h1><input type="text" name="" id="" style="border: white;"> </h1> -->
          </section></form>
          <div style="color: white;">
              <h1>WE Are Your Logistics Partner For <br> Seamless Delivery.</h1>
@@ -67,3 +75,11 @@
 </footer>
 </body>
 </html>
+
+<?php
+}else {
+    header("Location: signup.html");
+    exit();
+}
+
+?>

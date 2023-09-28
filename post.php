@@ -1,11 +1,11 @@
 <?php
 $con = mysqli_connect('localhost', 'root', "", 'logistic');
 
-$name = $_POST['u_name'];
-$email = $_POST['u_mail'];
-$passkey = $_POST['passkey'];
+$name = $_POST['ename'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-$insert = "INSERT INTO user(name, email, password) VALUES ('$name', '$email', '$passkey')";
+$insert = "INSERT INTO user(name, email, password) VALUES ('$name', '$email', '$password')";
 $done= mysqli_query($con, $insert);
 
 if($done){
@@ -18,8 +18,8 @@ if($done){
 
 
 
-$email = $_POST['u_mail'];
-$passkey = $_POST['passkey'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
 if ("$email===you2@gmail.com || $password===12345") {
     echo "my email is the same";
