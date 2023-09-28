@@ -264,8 +264,20 @@ padding: 30px;
 }
 .footer{
   display: flex;
+  padding: 40px 40px;
+  justify-content: space-between;
   background:var(--black);
+ align-items: center;
+  color: var(--white);
 }
 .spruce-logo-footer{
   background: var(--black);
+}
+.spruce-footer-info{
+  width: 30%;
+}
+.link-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
