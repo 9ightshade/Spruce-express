@@ -304,3 +304,13 @@ color: var(--green);
   color: var(--green);
   cursor: pointer;
 }
+.welcome-header{
+  background: url(./public/images/welcome-pagee-bg.jpg) var(--green);
+  color: var(--white);
+  height: 90vh;
+  background-blend-mode: multiply;
+  text-align: center;
+}
+.welcome-header > h1{
+  
+}
