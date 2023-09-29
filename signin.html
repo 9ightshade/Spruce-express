@@ -23,6 +23,9 @@
                     <p>
                         Track your logistics with <strong>SpruceXpress</strong>
                     </p>
+                    <?php if (!empty($error)) { ?>
+                        <p style="color: red;"><?php echo $error; ?></p>
+                    <?php } ?>
                     <label for="">Email</label>
                     <input
                         type="email"
