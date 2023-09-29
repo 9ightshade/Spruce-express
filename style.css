@@ -307,10 +307,12 @@ color: var(--green);
 .welcome-header{
   background: url(./public/images/welcome-pagee-bg.jpg) var(--green);
   color: var(--white);
+padding: 200px ;
   height: 90vh;
   background-blend-mode: multiply;
   text-align: center;
 }
-.welcome-header > h1{
-  
+.welcome-header > p{
+margin-top: 20px;
+font-size: 20px;
 }
