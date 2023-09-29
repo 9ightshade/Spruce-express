@@ -314,6 +314,11 @@ padding: 200px ;
   background-blend-mode: multiply;
   text-align: center;
 }
+.welcome-header > h1{
+  font-size: 45px;
+  width: 700px;
+  margin: 0 auto;
+}
 .welcome-header > p{
 margin-top: 20px;
 font-size: 20px;
