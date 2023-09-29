@@ -9,7 +9,7 @@ $insert = "INSERT INTO user(name, email, password) VALUES ('$name', '$email', '$
 $done= mysqli_query($con, $insert);
 
 if($done){
-    header("Location: ./signin.html");
+    header("Location: ./welcome.html");
 }
 
 
