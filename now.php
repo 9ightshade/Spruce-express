@@ -1,13 +1,14 @@
 <?php
 
 
+
+
 session_start();
 $con = mysqli_connect('localhost', 'root', "", 'logistic');
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
 
-    $empty = 0;
-    $error = "";
+    $php_errormsg = "";
 
 
 
@@ -20,17 +21,66 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
     $email = validate($_POST['email']);
     $password = validate($_POST['password']);
+    
 
-    if(strlen($email) == $empty && strlen($password) == $empty) {
-        $error = "email  or password must not be empty";
-        // header("Location: signup.html?error=empty password or email");
-    }else{
-        header("Location: ./now.php");
+        // $sql = "SELECT * FROM `user` WHERE email='$email' AND password='$password'";
+
+        // $result = mysqli_query($con, $sql);
+
+        // if (mysqli_num_rows($result) === 1) {
+        //     $row = mysqli_fetch_assoc($result);
+        //     if ($row['email'] === $email && $row['password'] === $password) {
+        //         $_SESSION['email'] = $row['email'];
+        //         $_SESSION['password'] = $row['password'];
+        //         header("Location: ./welcome.html");
+        //         exit();
+        //     }else{
+        //         $php_errormsg = "Incorrect Email or Password";
+        //         // header("Location: signin.html?error=Incorrect Email or Password");
+        //         // exit();
+        //     }
+
+        // }else{
+        //     $php_errormsg = "Incorrect Email or Password";
+        //     // header("Location: signin.html?error=Incorrect Email or Password");
+        //     // exit();
+        // }
+  
+
+
+$sql = "SELECT * FROM user WHERE email=? AND password=?";
+$stmt = mysqli_stmt_init($con);
+
+if (mysqli_stmt_prepare($stmt, $sql)) {
+    mysqli_stmt_bind_param($stmt, "ss", $email, $password);
+    mysqli_stmt_execute($stmt);
+
+    $result = mysqli_stmt_get_result($stmt);
+
+    if (mysqli_num_rows($result) === 1) {
+        $row = mysqli_fetch_assoc($result);
+        if ($row['email'] === $email && password_verify($password, $row['password'])) {
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['password'] = $row['password'];
+            header("Location: ./welcome.html");
+            exit();
+        } else {
+            $error = "Incorrect Email or Password";
+        }
+    } else {
+        $error = "Incorrect Email or Password";
     }
-
+} else {
+    // Handle database query preparation error
+    $error = "Database query error";
+}
+        
 }
 
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -96,4 +146,3 @@ Or continue with Google
         </div>
     </body>
 </html>
-
