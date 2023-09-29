@@ -206,6 +206,7 @@ margin-left: 40px;
 }
 .our-services-list{
   display: flex;
+  padding: 80px 80px;
   justify-content: space-between;
 }
 .services{
